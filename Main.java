@@ -1,6 +1,8 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-         Object [][]goods={
+        Scanner input=new Scanner(System.in); 
+        Object [][]goods={
                 {"Apple", 20 ,12.30},
                 {"Mango", 10 ,10},
                 {"mint", 19,2}
