@@ -34,7 +34,37 @@ public class Main {
 
 
         //sabrina
-        
+        String []itemname = {"apple","orange","berries"};
+        double []prices= {12,10,16};
+        int []quantity= {10,12,50};
+        double totalamount =0;
+        for(int i=0;i<prices.length;i++){
+            System.out.println("available items: " + itemname[i] +" prices: "+ prices[i] +" available quantities: "+ quantity[i] );
+        }
+       while(true){
+        System.out.println("enter 1 to purchase item 1 , 2 to purchase item 2 , 3 to purchase item 3 & 0 to quit");
+        int productnumber= input.nextInt();
+        if(productnumber==0){
+            System.out.println("thank you , come back later");
+            break ;
+        }
+        if ( productnumber<1 || productnumber>prices.length ){
+            System.out.println("invalid base try again");
+            continue ;
+        }
+        String ordredproduct =itemname[productnumber-1];
+        int productquantity =quantity[productnumber-1];
+        System.out.println("please enter your requested quantity:");
+        int ordredquantity = input.nextInt();
+        if( ordredquantity < 1 || ordredquantity > productquantity ){
+            System.out.println(" invalid quantity , try again");
+            continue ;
+        }
+        quantity[productnumber-1] =quantity[productnumber-1]-ordredquantity;
+        totalamount = totalamount +(prices[productnumber-1]*ordredquantity);
+       }
+          System.out.println(totalamount);
+          input.close();
     }
 }
     
