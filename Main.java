@@ -53,7 +53,7 @@ public class Main {
             System.out.println("invalid base try again");
             continue ;
         }
-        String ordredproduct =itemname[productnumber-1];
+        
         int productquantity =quantity[productnumber-1];
         System.out.println("please enter your requested quantity:");
         int ordredquantity = input.nextInt();
