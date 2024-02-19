@@ -38,8 +38,9 @@ public class Main {
         double []prices= {12,10,16};
         int []quantity= {10,12,50};
         double totalamount =0;
+        System.out.println("Available items:");
         for(int i=0;i<prices.length;i++){
-            System.out.println("available items: " + itemname[i] +" prices: "+ prices[i] +" available quantities: "+ quantity[i] );
+            System.out.println(itemname[i] +", prices: "+ prices[i] +", available quantities: "+ quantity[i] );
         }
        while(true){
         System.out.println("enter 1 to purchase item 1 , 2 to purchase item 2 , 3 to purchase item 3 & 0 to quit");
