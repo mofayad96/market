@@ -29,6 +29,9 @@ public class Main {
                 System.out.println("Authentication failed. Invalid username or password.");
             } }
         //muhammed essam end
+
+
+
         //sabrina,jana
         String [] itemname = {"apple","orange","berries"};
         double [] prices= {12,10,16};
@@ -46,13 +49,15 @@ public class Main {
         double[] purchasedTotals = new double[itemname.length];
         int purchasedItemCount = 0;
         //end youssef , lamis
+
+
         // sabrina , jana
         while(true){
             System.out.println("enter 1 to purchase item 1 , 2 to purchase item 2 , 3 to purchase item 3 & 0 to quit");
             int productnumber= input.nextInt();
 
             if(productnumber==0){
-                System.out.println("thank you , come back later");
+
                 break ;
             }
             if ( productnumber<1 || productnumber>itemname.length ){
@@ -80,7 +85,6 @@ public class Main {
             purchasedTotals[purchasedItemCount] = itemTotal;
             purchasedItemCount++;
 
-            // lamis , youssef
 
 
         }
@@ -90,6 +94,7 @@ public class Main {
         }
 
         System.out.println("Total Amount: $" + totalamount);
+        System.out.println("thank you , come back later");
         System.out.println("                            ");
         System.out.println("FOR ADMIN!!!!!!!!!");
         System.out.println("Updated items quantity:");
