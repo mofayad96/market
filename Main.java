@@ -4,7 +4,7 @@ public class Main {
     //array Bought_ItemQuantity to track the order
     static int[] Bought_ItemQuantity = new int[3];
     static Scanner input = new Scanner(System.in); //made scanner static
-    
+
     public static void main(String[] args) {
         //muhammed essam
         String[][] users = {
@@ -38,7 +38,7 @@ public class Main {
         }
         //muhammed essam end
 
-        //sabrina & Lamice & youssef
+        //sabrina & Jana
         String[] itemname = {"apple", "orange", "berries"};
         double[] prices = {12, 10, 16};
         int[] quantity = {10, 12, 50};
@@ -51,7 +51,7 @@ public class Main {
         while (true) {
             System.out.println("enter 1 to purchase item 1 , 2 to purchase item 2 , 3 to purchase item 3 & 0 to quit");
             int productnumber = input.nextInt();
-            if (productnumber == 0) {
+            if (productnumber == 0) {//Lamice and youssef
                 System.out.println("Product\t\tQuantity\t\tPrice\t\tValue");
                 for (int i = 0; i < Bought_ItemQuantity.length; i++) {
                     //the ultimate receipt ,fathalla receipt
