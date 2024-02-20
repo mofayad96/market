@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     //array Bought_ItemQuantity to track the order
-    //youssef
+    //youssef, lamis
     static int[] Bought_ItemQuantity = new int[3];
     static Scanner input = new Scanner(System.in); //made scanner static
 
@@ -55,7 +55,7 @@ public class Main {
             // jana end
             
             
-            // YOUSSEF
+            // YOUSSEF, lamis
             if (productnumber == 0) {
                 System.out.println("Product\t\tQuantity\t\tPrice\t\tValue");
                 for (int i = 0; i < Bought_ItemQuantity.length; i++) {
@@ -68,7 +68,7 @@ public class Main {
                 System.out.println("Your total is: " + totalamount);
                 System.out.println("thank you , come back later");
                 break;
-            }//END YOUSSEF
+            }//END YOUSSEF,lamis
             
             
             // sabrina
@@ -88,7 +88,7 @@ public class Main {
             
             
             
-            //Lamis
+            //sabrina , jana
             quantity[productnumber - 1] = quantity[productnumber - 1] - orderedquantity;
             Bought_ItemQuantity[productnumber-1] += orderedquantity;//updating the shopping cart and total amount
             totalamount =totalamount + (prices[productnumber - 1] * orderedquantity);
@@ -103,6 +103,6 @@ public class Main {
             System.out.println(itemname[i] + "  " + prices[i] + "   " + quantity[i]);
         }
         input.close();
-        // end lamis
+        // end sabrina , jana
     }
 }
