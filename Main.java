@@ -38,7 +38,7 @@ public class Main {
         }
         //muhammed essam end
 
-        //sabrina & Lamice & youssef
+        //jana
         String[] itemname = {"apple", "orange", "berries"};
         double[] prices = {12, 10, 16};
         int[] quantity = {10, 12, 50};
@@ -51,10 +51,14 @@ public class Main {
         while (true) {
             System.out.println("enter 1 to purchase item 1 , 2 to purchase item 2 , 3 to purchase item 3 & 0 to quit");
             int productnumber = input.nextInt();
+            // jana end
+            
+            
+            // YOUSSEF
             if (productnumber == 0) {
                 System.out.println("Product\t\tQuantity\t\tPrice\t\tValue");
                 for (int i = 0; i < Bought_ItemQuantity.length; i++) {
-                    //the ultimate receipt ,fathalla receipt
+                    //the ultimate receipt ,fathallah receipt
                     if(Bought_ItemQuantity[i] == 0)
                         continue;
                     System.out.println(itemname[i]);
@@ -63,9 +67,12 @@ public class Main {
                 System.out.println("Your total is: " + totalamount);
                 System.out.println("thank you , come back later");
                 break;
-            }
+            }//END YOUSSEF
+            
+            
+            // sabrina
             //if the user entered an invalid number
-            if (productnumber < 1 || productnumber > prices.length) {
+            if (productnumber < 1 || productnumber > itemname.length) {
                 System.out.println("invalid base try again");
                 continue;
             }
@@ -77,12 +84,16 @@ public class Main {
                 System.out.println(" invalid quantity , try again");
                 continue;
             }
-            //updating stock
+            
+            
+            
+            //Lamis
             quantity[productnumber - 1] = quantity[productnumber - 1] - orderedquantity;
             Bought_ItemQuantity[productnumber-1] += orderedquantity;//updating the shopping cart and total amount
-            totalamount += (prices[productnumber - 1] * orderedquantity);
+            totalamount =totalamount + (prices[productnumber - 1] * orderedquantity);
         }
-        //scanner close for good practice
+       
+       
         System.out.println("                    ");
         System.out.println("FOR ADMIN!!!!!!!!!");
         System.out.println("Updated items quantity:");
@@ -91,5 +102,6 @@ public class Main {
             System.out.println(itemname[i] + "  " + prices[i] + "   " + quantity[i]);
         }
         input.close();
+        // end lamis
     }
 }
