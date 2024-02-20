@@ -23,7 +23,7 @@ public class Main {
 
             // Check if entered username and password match
             for (String[] user : users) {
-                if (user[0].equalsIgnoreCase(Username) && user[1].equals(Password)) {
+                if (user[0].equals(Username) && user[1].equals(Password)) {
                     auth = true;
                     break; // Exit the loop if a match is found
                 }
