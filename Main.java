@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     static Scanner input = new Scanner(System.in); //made scanner static
