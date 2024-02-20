@@ -2,9 +2,10 @@ import java.util.*;
 
 public class Main {
     //arraylists to track the order
-    static ArrayList<String> Bought_ItemNames = new ArrayList<>();
-    static ArrayList<Double> Bought_ItemPrices = new ArrayList<>();
-    static ArrayList<Integer> Bought_ItemQuantity = new ArrayList<>();
+    static String[] itemname = {"apple", "orange", "berries"};
+    static double[] prices = {12, 10, 16};
+    static int[] quantity = {10, 12, 50};
+    static int[] Bought_ItemQuantity = new int[3];
     static Scanner input = new Scanner(System.in); //made scanner static
 
     public static void main(String[] args) {
@@ -41,9 +42,7 @@ public class Main {
         //muhammed essam end
 
         //sabrina & Lamice & youssef
-        String[] itemname = {"apple", "orange", "berries"};
-        double[] prices = {12, 10, 16};
-        int[] quantity = {10, 12, 50};
+
         double totalamount = 0;
         System.out.println("Available items:");
         for (int i = 0; i < prices.length; i++) {
@@ -74,23 +73,22 @@ public class Main {
             }
             //updating stock
             quantity[productnumber - 1] = quantity[productnumber - 1] - orderedquantity;
-            //updating the shopping cart and total amount
-            Bought_ItemNames.add(itemname[productnumber - 1]);
-            Bought_ItemPrices.add(prices[productnumber - 1]);
-            Bought_ItemQuantity.add(orderedquantity);
+            Bought_ItemQuantity[productnumber-1] = orderedquantity;//updating the shopping cart and total amount
             totalamount += (prices[productnumber - 1] * orderedquantity);
         }
-        //scanner close for good practice 
+        //scanner close for good practice
         input.close();
     }
 
     static void Receipt() {
 
         System.out.println("Product\t\tQuantity\t\tPrice\t\tValue");
-        for (int i = 0; i < Bought_ItemNames.size(); i++) {
+        for (int i = 0; i < Bought_ItemQuantity.length; i++) {
             //the ultimate receipt ,fathalla receipt
-            System.out.println(Bought_ItemNames.get(i));
-            System.out.println("\t\t\t" + Bought_ItemQuantity.get(i) + "\t\t\t\t" + Bought_ItemPrices.get(i) + "\t\t" + Bought_ItemPrices.get(i) * Bought_ItemQuantity.get(i));
+            if(Bought_ItemQuantity[i] == 0)
+                continue;
+            System.out.println(itemname[i]);
+            System.out.println("\t\t\t" + Bought_ItemQuantity[i] + "\t\t\t\t" + prices[i] + "\t\t" + prices[i] * Bought_ItemQuantity[i]);
         }
 
     }
