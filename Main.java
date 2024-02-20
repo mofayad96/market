@@ -38,7 +38,7 @@ public class Main {
         }
         //muhammed essam end
 
-        //sabrina & Jana
+        //sabrina & Lamice & youssef
         String[] itemname = {"apple", "orange", "berries"};
         double[] prices = {12, 10, 16};
         int[] quantity = {10, 12, 50};
@@ -51,7 +51,7 @@ public class Main {
         while (true) {
             System.out.println("enter 1 to purchase item 1 , 2 to purchase item 2 , 3 to purchase item 3 & 0 to quit");
             int productnumber = input.nextInt();
-            if (productnumber == 0) {//Lamice and youssef
+            if (productnumber == 0) {
                 System.out.println("Product\t\tQuantity\t\tPrice\t\tValue");
                 for (int i = 0; i < Bought_ItemQuantity.length; i++) {
                     //the ultimate receipt ,fathalla receipt
@@ -83,6 +83,13 @@ public class Main {
             totalamount += (prices[productnumber - 1] * orderedquantity);
         }
         //scanner close for good practice
+        System.out.println("                    ");
+        System.out.println("FOR ADMIN!!!!!!!!!");
+        System.out.println("Updated items quantity:");
+        System.out.println("items  prices  quantity");
+        for (int i = 0; i < prices.length; i++) {
+            System.out.println(itemname[i] + "  " + prices[i] + "   " + quantity[i]);
+        }
         input.close();
     }
 }
